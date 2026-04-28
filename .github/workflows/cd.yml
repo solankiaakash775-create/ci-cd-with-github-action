@@ -15,7 +15,7 @@ jobs:
                 host: ${{ secrets.HOST }}
                 username: ubuntu
                 key: ${{ secrets.EC2_SSH_KEY }}
-                script:
+                script: |
                     set -e
 
                     if [ ! -d "ci-cd-with-github-action" ]; then
