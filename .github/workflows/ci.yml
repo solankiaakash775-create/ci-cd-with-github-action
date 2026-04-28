@@ -1,4 +1,4 @@
-name: CI FLOW
+name: ci flow
 
 on: 
     push:
