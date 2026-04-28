@@ -15,7 +15,7 @@ jobs:
                 host: ${{ secrets.HOST }}
                 username: ${{ secrets.USERNAME }}
                 key: ${{ secrets.EC2_SSH_KEY }}
-                scripts:
+                script:
                     git clone https://github.com/solankiaakash775-create/ci-cd-with-github-action.git
                     cd ~/ci-cd-with-github-action
                     git pull origin main 
