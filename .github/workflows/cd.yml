@@ -16,10 +16,17 @@ jobs:
                 username: ubuntu
                 key: ${{ secrets.EC2_SSH_KEY }}
                 script:
-                    git clone https://github.com/solankiaakash775-create/ci-cd-with-github-action.git
-                    cd ~/ci-cd-with-github-action
-                    git pull origin main 
-                    docker compose pull 
+                    set -e
+
+                    if [ ! -d "ci-cd-with-github-action" ]; then
+                    git clone https://github.com/solankiakash775-create/ci-cd-with-github-action.git
+                    fi
+
+                    cd ci-cd-with-github-action
+                    git pull origin main
+
+                    docker compose down
+                    docker compose pull
                     docker compose up -d 
 
               
