@@ -1,8 +1,8 @@
 name: cd flow
 
 on:
-    workflows_run:
-        workflow: ["ci flow"]
+    workflow_run:
+        workflows: ["ci flow"]
         types: [completed]
 jobs:
     deploy:
