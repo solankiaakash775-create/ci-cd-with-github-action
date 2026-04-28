@@ -13,7 +13,7 @@ jobs:
               uses: appleboy/ssh-action@v1
               with:
                 host: ${{ secrets.HOST }}
-                username: ${{ secrets.USERNAME }}
+                username: ubuntu
                 key: ${{ secrets.EC2_SSH_KEY }}
                 script:
                     git clone https://github.com/solankiaakash775-create/ci-cd-with-github-action.git
